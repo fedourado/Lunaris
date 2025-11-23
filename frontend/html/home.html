@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lunaris</title>
+    <link rel="icon" href="/img/favicon.png">
+
+    <!--Font Noto Sans-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <!--Bootstrap framework-->
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"/>
+
+  <!-- Bootstrap Icons -->
+    <link 
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+
+
+  <!--CSS-->
+    <link rel="stylesheet" href="/css/style.css">
+
+
+</head>
+<body>
+
+   <!-- Botão Dark Mode -->
+    <button id="toggle-dark" class="btn position-fixed bottom-0 end-0 m-4" title="Alternar tema claro/escuro">
+      🌙
+    </button>
+
+    <!-- NAVBAR -->
+
+    <div class="bg-lunaris">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a class="navbar-brand d-flex align-items-center">
+          <img src="/img/logo.png" alt="Logomarca do Lunaris" style="width: 100px;">
+          <span class="ms-2 fs-4" style="color: #FFE9AB; font-weight: 600;">Lunaris</span>
+        </a>
+
+
+       <!--Botão burguer--> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Topo navbar-->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="ms-auto d-flex gap-2 mt-3 mt-lg-0">
+            <a href="prototipos.html">
+              <button class="btn btn-light" id="learnMoreBtn">Conheça mais sobre a plataforma</button>
+            </a>
+            <button class="btn btn-light text-purple" id="downloadBtn">Baixar o app</button>
+          </div>
+        </div>
+      </nav>
+
+     
+      <!-- HEADER -->
+      <header class="py-5">
+        <div class="container py-5">
+          <div class="row align-items-center">
+          
+            <!--Texto-->
+            <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0 header-text">
+              <h1 class="fw-bold text-white">Acompanhe o comportamento do seu pet de forma simples e rápida</h1>
+              <h4 class="text-white mt-3" style="font-weight: 400">Uma plataforma intuitiva para monitorar e cuidar do bem-estar do seu animal</h4>
+            </div>
+
+            <!-- Imagem -->
+            <div class="col-12 col-md-6 text-center header-img">
+              <img 
+                src="/img/pets-animals-adorable.png" 
+                class="img-fluid rounded-4"
+                alt="Animais"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ONDINHA -->
+        <div class="wave-bottom">
+          <svg viewBox="0 0 1440 120">
+            <path d="M0,64 C360,100 720,20 1440,64 L1440,120 L0,120 Z" fill="white"/>
+          </svg>
+        </div>
+      </header>
+    </div>
+
+    <!-- SOBRE A PLATAFORMA -->
+  <section class="bg-white" id="about" style="position: relative;">
+    <div class="container py-5">
+      <div class="row align-items-center gy-4">
+
+        <!-- Imagem -->
+        <div class="col-md-6">
+          <img 
+            src="/img/woman-using-phone-car.jpg"
+            class="img-fluid rounded-4 shadow"
+            alt="App"
+          />
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="col-md-6 ps-lg-5 ps-md-4 ps-3">
+          <span class="badge bg-purple text-white mb-3" style="background:#c9a6ff;">
+            Sobre o App
+          </span>
+
+          <h2 class="fw-bold mb-3">Monitoramento do comportamento animal de forma rápida e eficiente</h2>
+
+          <p class="text-secondary mb-4">
+            O aplicativo organiza os principais cuidados do seu pet em uma plataforma simples e baseada em registros.
+          </p>
+
+          <!-- Features -->
+          <div class="d-flex gap-3 mb-4">
+            <div class="feature-icon d-flex align-items-center justify-content-center">
+              <i class="bi bi-camera-video-fill" style="font-size: 2rem; color: #A7C5D9;"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Câmeras</h5>
+              <p class="text-secondary mb-0">Integração das câmeras, possibilitando o monitoramento ao vivo.</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-3">
+            <div class="feature-icon d-flex align-items-center justify-content-center">
+              <i class="bi bi-calendar-event-fill" style="font-size: 2rem; color: #7566D9;"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Compromissos e agenda</h5>
+              <p class="text-secondary mb-0">Vacinas, consultas, banhos e lembretes organizados em um só lugar.</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-4">
+            <div class="feature-icon d-flex align-items-center justify-content-center">
+              <i class="bi bi-bar-chart-fill" style="font-size: 2rem; color: #F2D479;"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Relatórios diários</h5>
+              <p class="text-secondary mb-0">Todos os cuidados registrados.</p>
+            </div>
+          </div>
+
+          <a href="/prototipos.html">
+            <button class="btn btn-primary rounded-pill px-4 mt-4" id="sobre-app">
+            Conhecer a plataforma
+            </button>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Ondinhas no final da seção -->
+    <div class="wave-container" style="position: relative; height: 100px; overflow: hidden; margin-top: 100px;">
+      <!-- Ondinha amarela -->
+      <svg viewBox="0 0 1440 400" preserveAspectRatio="none" style="width:100%; height:100px; position:absolute; top:0;">
+        <path d="M0,60 C360,180 1080,0 1440,40 L1440,600 L0,600 Z" fill="rgba(255,255,255,0.4)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- CARROSSEL -->
+  <section id="carrossel-secao" class="py-5" style="background-color: #F8F9FA">
+    <div class="container text-center mb-4">
+      <h2 class="mt-3">Uma experiência completa e intuitiva</h2>
+    </div>
+    
+    <div id="mockupCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="/img/Mockup - home.png" class="d-block w-100 rounded" alt="Tela inicial" style="max-height: 800px;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="/img/Mockup - perfil pet (1).png" class="d-block w-100 rounded" alt="Perfil do Pet" style="max-height: 800px;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="/img/Mockup - painel relatorios.png" class="d-block w-100 rounded" alt="Painel de relatórios" style="max-height: 800px;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="/img/Mockup - relatorios  pet.png" class="d-block w-100 rounded" alt="Relatórios do Pet" style="max-height: 800px;">
+        </div>
+
+      </div>
+
+      <!--Setinhas-->
+      <div class="d-flex justify-content-center align-items-center gap-3 mt-4 controls-under" id="`setinha">
+        <button class="carousel-arrow" data-bs-target="#mockupCarousel" data-bs-slide="prev">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <span class="carousel-hint">deslizar para mudar</span>
+
+        <button class="carousel-arrow" data-bs-target="#mockupCarousel" data-bs-slide="next">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+        <section class="py-5">
+          <div class="container text-center mb-5">
+            <span class="badge bg-purple text-white px-3 py-2">Nossa equipe</span>
+            <h2 class="mt-3">Nosso time</h2>
+            <p class="text-secondary">
+              Transformando conhecimento em cuidado, ajudando tutores e profissionais a entender e melhorar a vida dos pets."
+            </p>
+          </div>
+        
+          <div class="container">
+            <div class="row g-4 align-items-center justify-content-center">
+        
+              <!-- Card 1 -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card shadow-sm">
+                  <img src="/img/lke13.jpg"
+                       class="card-img-top" alt="Ana">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Fernanda Dourado</h5>
+                    <p class="text-purple fw-semibold">Estudante de Ciência da Computação</p>
+                    <p class="text-secondary small">
+                      Estudante apaixonado por tecnologia e animais.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!--Card 2-->
+              <div class="col-lg-3 col-md-6">
+                <div class="card shadow-sm">
+                  <img src="/img/4bab1600-0d58-4e5a-8c8d-cad5e490feff.jpg"
+                       class="card-img-top" alt="Ana">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Lucas Miranda</h5>
+                    <p class="text-purple fw-semibold">Estudante de Ciência da Computação</p>
+                    <p class="text-secondary small">
+                      Estudante apaixonado por tecnologia e animais.
+                    </p>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </section>
+
+      <footer class="footer-custom text-white pt-5">
+        <div class="container pb-4">
+
+          <div class="row g-4">
+
+            <!-- Logo e descrição -->
+            <div class="col-md-9">
+              <div class="d-flex align-items-center mb-3">
+                <div class="rounded-circle bg-danger d-flex justify-content-center align-items-center" 
+                    style="width:40px;height:40px;">
+                  ❤️
+                </div>
+                <span class="ms-2 fs-5">Lunaris</span>
+              </div>
+
+              <p class="text-secondary" id="footer-text1">
+                Cuidando dos seus animais com carinho, tecnologia e muito amor.
+              </p>
+
+              <div class="d-flex gap-3 mb-3">
+                <a href="#" class="btn btn-outline-light btn-sm rounded-circle">IG</a>
+                <a href="#" class="btn btn-outline-light btn-sm rounded-circle">IN</a>
+                <a href="#" class="btn btn-outline-light btn-sm rounded-circle">YT</a>
+              </div>
+            </div>
+
+            <!-- Download -->
+            <div class="col-md-3 col-sm-6 col-12">
+              <h5 class="mb-2">Baixe o App</h5>
+              <button class="btn btn-primary w-100" id="btn-download-footer">Download</button>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-6">
+              <h5 class="mb-2">Newsletter</h5>
+              <p class="text-secondary small" id="footer-text4">Receba novidades e conteúdos no seu e-mail</p>
+              <form id="newsletter-form" class="d-flex flex-column flex-sm-row gap-2">
+                <input type="email" name="email" placeholder="Digite seu e-mail" required
+                      class="form-control form-control-sm">
+                <button type="submit" class="btn btn-primary btn-sm" style="background-color:#5c4dbe; border: none" id="bnt-news">Inscrever</button>
+              </form>
+              <p id="newsletter-msg" class="mt-2 small"></p>
+            </div>
+
+          </div>
+
+          <hr class="border-secondary mt-4" />
+
+          <div class="d-flex justify-content-between text-secondary large pt-3">
+            <p class="m-0" id="footer-text2">© 2025 Lunaris. Todos os direitos reservados.</p>
+            <p class="m-0" id="footer-text3">Feito com ❤️ para os amantes de pets</p>
+          </div>
+        </div>
+      </footer>
+
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="/js/darkmode.js"></script>
+  <script src="/js/newsletter.js"></script>
+
+  <!--Carrossel-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/carrossel.js"></script>
+
+</body>
+</html>

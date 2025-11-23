@@ -1,0 +1,455 @@
+/*Light mode*/
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: white;
+  color: #202223;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/*Header e navbar*/
+
+.bg-lunaris {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #6858d1 0%,     
+    #7d6fd8 15%,     
+    #9480e5 30%,   
+    #af9fee 50%,     
+    #bcaded 70%,     
+    #cec4f0 85%,    
+    #dedbe7 100%     
+  );
+  transition: background 0.3s ease;
+}
+
+.bg-lunaris::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.03) 1px, rgba(255,255,255,0) 1px);
+  background-size: 4px 4px;              
+  mix-blend-mode: overlay;                
+  opacity: 0.8;                          
+}
+
+.bg-lunaris .wave-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 2; 
+}
+
+
+.bg-lunaris > * {
+  position: relative;
+  z-index: 3;
+}
+
+.wave-bottom svg path {
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.navbar{
+  background-color: transparent !important;
+}
+
+#learnMoreBtn {
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#learnMoreBtn:hover {
+  background-color: #9083E4;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+#downloadBtn {
+  background-color: white;
+  color: #7566D9;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 36px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+
+#downloadBtn:hover {
+  background-color: #e1dee7;
+  color: #4c3bb6;
+  border: none;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 1rem 4rem;
+    text-align: center;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 1;
+}
+
+.wave-bottom svg {
+  width: 100%;
+  display: block;
+}
+
+
+.header-text {
+  margin-top: 0; 
+  text-align: center;
+}
+
+.header-text h1 {
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+}
+
+  
+.header-img img {
+  max-width: 120%; /* aumenta a imagem */
+  transition: filter 0.3s ease;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+    .header-text h1 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+    .header-text h3 {
+        font-size: clamp(0.9rem, 3.5vw, 1.3rem);
+    }
+}
+
+/*Sobre*/
+
+#sobre-app {
+  background-color: #7566D9;
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+#sobre-app:hover {
+  background-color: #524894;
+}
+
+.wave-bottom svg {
+    width: 100%;
+    display: block;
+}
+
+
+/*Protótipo Figma*/
+
+.figma-embed-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    min-height: 500px; /* altura mínima para desktop */
+}
+
+.figma-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Mobile XS e SM */
+@media (max-width: 767px) {
+    .figma-embed-container {
+        min-height: 700px; /* garante que o protótipo apareça inteiro */
+    }
+}
+
+/* Tablets MD */
+@media (min-width: 768px) and (max-width: 991px) {
+    .figma-embed-container {
+        min-height: 600px;
+    }
+}
+
+/* Laptops LG */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .figma-embed-container {
+        min-height: 550px;
+    }
+}
+
+
+/*Footer*/
+
+.footer-custom {
+  background-color: #1b182b !important;
+  transition: background-color 0.3s ease;
+}
+
+#footer-text1 {
+  color: #a1a1a1 !important;
+  transition: color 0.3s ease;
+}
+
+#footer-text2 {
+  color: #a1a1a1   !important;
+  transition: color 0.3s ease;
+}
+
+#footer-text3 {
+  color: #a1a1a1 !important;
+  transition: color 0.3s ease;
+}
+
+
+#btn-download-footer {
+  background-color: #7566D9;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 36px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+
+#btn-download-footer:hover {
+  background-color: #5c4dbe;
+  color: white;
+  border: none;
+}
+
+/* Botão toggle dark mode */
+#toggle-dark {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #FFE9AB;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+#toggle-dark:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.text-secondary {
+  transition: color 0.3s ease;
+}
+
+.badge {
+  transition: all 0.3s ease;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+.dark-mode body {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+.dark-mode .bg-lunaris {
+  background: linear-gradient(
+    180deg,
+    #7566D9 0%,      /* Roxo */
+    #6052b6 15%,     /* Roxonho */
+    #483d8e 30%,     /* roxo claro */
+    #372e6f  50%,     /* roxo bem claro */
+    #2f2761 70%,     /* roxo bem bem claro */
+    #262050 85%,     /* quase branco*/
+    #17152c 100%  
+  );
+}
+
+.dark-mode .bg-lunaris::before {
+  background-image:
+    radial-gradient(rgba(255,255,255,0.02) 1px, rgba(255,255,255,0) 1px);
+}
+
+.dark-mode header,
+.dark-mode section {
+  color: #e5e5e5;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5 {
+  color: #f5f5f5;
+}
+
+/*Navbar*/
+.navbar-dark .navbar-brand span {
+  color: #FFE9AB !important;
+}
+
+.dark-mode .navbar .btn-light {
+  background-color: #2d2d3d !important;
+  color: #e5e5e5 !important;
+  border: 1px solid #3d3d4d;
+}
+
+.dark-mode #learnMoreBtn:hover {
+  background-color: #5c4dbe !important;
+  color: #fff;
+}
+
+.dark-mode #downloadBtn {
+  background-color: #817ab1 !important;
+  color: white !important;
+}
+
+.dark-mode #downloadBtn:hover {
+  background-color: #5c4dbe !important;
+  color: white !important;
+}
+
+/* Seção sobre */
+.dark-mode #about {
+  background-color: #212121 !important;
+}
+
+.dark-mode .card {
+  background-color: #252530 !important;
+  color: #e5e5e5 !important;
+  border-color: #3d3d4d;
+}
+
+.dark-mode .card .text-purple {
+  color: #c9a6ff !important;
+}
+
+.dark-mode .text-secondary {
+  color: #b0b0b0 !important;
+}
+
+/* Footer */
+.dark-mode .footer-custom {
+  background-color: #0f0f0f !important;
+  color: #b0b0b0 !important;
+}
+
+.dark-mode .footer-custom a.btn-outline-light {
+  border-color: #555 !important;
+  color: #e5e5e5 !important;
+}
+
+.dark-mode .footer-custom a.btn-outline-light:hover {
+  background-color: #2d2d3d !important;
+  border-color: #7566D9 !important;
+}
+
+.dark-mode #footer-text1,
+.dark-mode #footer-text2,
+.dark-mode #footer-text3 {
+  color: #888 !important;
+}
+
+.dark-mode .btn-primary {
+  background-color: #7b4dff !important;
+  border-color: #7b4dff !important;
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: #5c4dbe !important;
+  border-color: #5c4dbe !important;
+}
+
+.dark-mode .badge {
+  opacity: 0.9;
+}
+
+.dark-mode .team-card img {
+  filter: brightness(0.85);
+}
+
+.dark-mode .wave-bottom svg path,
+.dark-mode .wave-container svg path {
+  fill: #1a1a1a !important;
+}
+
+.dark-mode #sobre-app {
+  background-color: #7b4dff !important;
+}
+
+.dark-mode #sobre-app:hover {
+  background-color: #5c4dbe !important;
+}
+
+/* Botão toggle no dark mode */
+.dark-mode #toggle-dark {
+  background-color: rgba(50, 50, 60, 0.8);
+  border-color: rgba(100, 100, 120, 0.5);
+  color: #FFE9AB;
+}
+
+.dark-mode #toggle-dark:hover {
+  background-color: rgba(70, 70, 80, 0.9);
+}
+
+/* Feature icons */
+.feature-icon {
+  transition: all 0.3s ease;
+}
+
+.dark-mode .feature-icon {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 12px;
+}
