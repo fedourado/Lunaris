@@ -28,7 +28,9 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Envio de e-mail (Nodemailer)
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,

@@ -288,10 +288,16 @@ header .header-text h4 {
 }
 
 
-#btn-news {
-  background-color: #5c4dbe;
-  color: white;
+.newsletter-btn {
+  background-color: #6c63ff !important;
+  border-color: #6c63ff !important;
 }
+
+.newsletter-btn:hover {
+  background-color: #413aa0 !important;
+  border-color: #413aa0 !important;
+}
+
 
 
 #footer-text4 {
