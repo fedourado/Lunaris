@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = form.email.value;
 
     try {
-      const res = await fetch('https://lunaris-uwto.onrender.com', {
+      const res = await fetch('https://lunaris-uwto.onrender.com/subscribers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: form.email.value })
