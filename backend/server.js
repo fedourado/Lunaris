@@ -18,7 +18,7 @@ app.use('/img', express.static(path.join(__dirname, '../img')));
 
 // Rota Principal
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, '../html/home.html'));
+  res.sendFile(path.join(__dirname, '../html/index.html'));
 });
 
 // Conexão com Supabase
