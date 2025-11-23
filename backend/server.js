@@ -37,6 +37,31 @@ const transporter = nodemailer.createTransport({
   },
 })
 
+transporter.verify((error, success) => {
+  if (error) {
+    console.log("ERRO DE SMTP:", error);
+  } else {
+    console.log("SMTP OK - pronto para enviar");
+  }
+});
+
+app.get("/test-email", async (req, res) => {
+  try {
+    const info = await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      subject: "Teste Lunaris ✔",
+      text: "Se chegou, o SMTP está funcionando!",
+    });
+
+    res.send("ENVIADO: " + JSON.stringify(info));
+  } catch (err) {
+    console.error("ERRO AO ENVIAR:", err);
+    res.status(500).send("ERRO: " + err.message);
+  }
+});
+
+
 // Template HTML
 
 const emailHTML = `
