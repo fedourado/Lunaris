@@ -20,7 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ email: emailInput.value })
       })
 
-      const data = await res.json();
+      let data;
+      try {
+        data = await res.json(); // tenta ler o JSON
+      } catch {
+        data = { success: false, message: 'Resposta inválida do servidor' };
+      }
 
       msg.textContent = data.message || data.error;
       msg.style.color = data.success ? 'lightgreen' : 'tomato';
