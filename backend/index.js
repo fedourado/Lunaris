@@ -1,24 +1,22 @@
-const app = require('express')()
-const nodemailer = require('nodemailer')
-require('dotenv').config()
+require('dotenv').config();
+const nodemailer = require('nodemailer');
 
-
+// Configuração do transporter
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     host: 'smtp.gmail.com',
     secure: false,
     port: 587,
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+        user: process.env.EMAIL_USER, // seu email
+        pass: process.env.EMAIL_PASS  // senha de app do Gmail
     }
 });
-
 
 async function sendEmail(to) {
     const mailOptions = {
         from: process.env.EMAIL_USER,
-        to,
+        to: process.env.TO_EMAIL,
         subject: 'Obrigado(a) por se inscrever na nossa Newsletter!',
         html: `<!DOCTYPE html>
         <html>
@@ -50,11 +48,16 @@ async function sendEmail(to) {
         console.log('Email enviado:', info.response);
         return info;
     } catch (err) {
-        console.log('Erro ao enviar email', err);
+        console.error('Erro ao enviar email:', err);
         throw err;
     }
 
 }
 
+// Teste local
+async function testEmail() {
+    const testRecipient = 'seu-email-de-teste@gmail.com'; // coloque seu email aqui
+    await sendEmail(testRecipient);
+}
 
-module.exports = { sendEmail };
+testEmail();

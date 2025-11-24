@@ -53,13 +53,9 @@ if (error) {
 
 }
 
-try {
-  await sendEmail(email);
-  return res.json({ success: true, message: 'Email cadastrado com sucesso!' });
-} catch (err) {
-  console.error('Erro ao enviar email:', err);
-  res.status(500).json({ success: false, message: 'Erro ao enviar email' });
-}
+
+return res.json({ success: true, message: 'Email cadastrado com sucesso!' });
+
 
 });
 
