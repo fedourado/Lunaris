@@ -4,8 +4,10 @@ const { createClient } = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const{ sendEmail } = require('./index.js');
 
 const app = express();
+app.use(express.json());
 app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
@@ -29,7 +31,6 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 // Rota para newsletter
 app.post('/subscribers', async (req, res) => {
   const { email } = req.body;
-  console.log('Email recebido:', email);
 
 
   if (!email) 
@@ -41,26 +42,25 @@ const { data, error } = await supabase
   .insert([{ email }]);
 
 if (error) {
-  console.log('Erro Supabase:', error);
+console.log('Erro Supabase:', error);
   if (error.code === '23505') 
     return res.status(400).json({ success: false, message: 'Email já cadastrado' });
 
   return res.status(500).json({ success: false, message: error.message });
 }
 
+
 try {
-  await transporter.sendMail({
-    from: process.env.EMAIL_USER,
-    to: email,
-    subject: "Obrigada por se inscrever no nosso Newsletter! 💜",
-    html: emailHTML,
-  });
+  await sendEmail(email);
+  res.json({ message: 'Email cadastrado com sucesso!' });
 } catch (err) {
-  console.error("Erro ao enviar email:", err);
+  console.error('Erro ao enviar email:', err)
+  res.status(500).json({ message: 'Erro ao enviar email' });
 }
 
-  res.json({ success: true, message: 'Inscrição realizada e email enviado!' });
 });
+
+
 
 // Start do servidor
 const PORT = process.env.PORT || 3000;
