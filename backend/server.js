@@ -41,20 +41,23 @@ const { data, error } = await supabase
   .from('subscribers')
   .insert([{ email }]);
 
+
 if (error) {
-console.log('Erro Supabase:', error);
-  if (error.code === '23505') 
-    return res.status(400).json({ success: false, message: 'Email já cadastrado' });
+    console.log('Erro Supabase:', error);
+
+    if (error.code === '23505' || (error.message && error.message.includes('duplicate'))) {
+      return res.status(400).json({ success: false, message: 'Email já cadastrado' });
+    }
 
   return res.status(500).json({ success: false, message: error.message });
-}
 
+}
 
 try {
   await sendEmail(email);
-  res.json({ message: 'Email cadastrado com sucesso!' });
+  res.json({ sucess: true, message: 'Email cadastrado com sucesso!' });
 } catch (err) {
-  console.error('Erro ao enviar email:', err)
+  console.error('Erro ao enviar email:', err);
   res.status(500).json({ message: 'Erro ao enviar email' });
 }
 
