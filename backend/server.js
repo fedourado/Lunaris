@@ -18,7 +18,7 @@ app.use('/js', express.static(path.join(__dirname, '../js')));
 app.use('/img', express.static(path.join(__dirname, '../img')));
 
 // Rota Principal
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../html/index.html'));
 });
 
@@ -55,10 +55,10 @@ if (error) {
 
 try {
   await sendEmail(email);
-  res.json({ sucess: true, message: 'Email cadastrado com sucesso!' });
+  return res.json({ success: true, message: 'Email cadastrado com sucesso!' });
 } catch (err) {
   console.error('Erro ao enviar email:', err);
-  res.status(500).json({ message: 'Erro ao enviar email' });
+  res.status(500).json({ success: false, message: 'Erro ao enviar email' });
 }
 
 });
