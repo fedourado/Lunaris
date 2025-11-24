@@ -8,7 +8,7 @@ const{ sendEmail } = require('./index.js');
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: 'https://lunaris-site.onrender.com' }));
 app.use(bodyParser.json());
 
 // Arquivos estáticos
